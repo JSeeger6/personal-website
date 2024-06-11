@@ -30,7 +30,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 670px;
     width: 100%;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -111,11 +111,11 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     box-sizing: border-box;
-    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .card:hover, .card:active {
-    transform: scale(1.05); /* Scale up the card */
+    transform: scale(1.03); /* Scale up the card */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow for a lifting effect */
 }
 
@@ -171,15 +171,17 @@ p {
         margin-top: 50px;
         align-self: center;
         margin-bottom: 100px;
+        border-radius: 25px;
     }
 
     .profile-img {
         margin-top: 0;
-        margin-right: 20px;
+        width: 110px;
+        height: 110px;
     }
 
     .section {
-        width: 80%;
+        width: 85%;
         align-items: center;
     }
 }
