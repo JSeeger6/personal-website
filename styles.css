@@ -32,6 +32,7 @@ body {
     background-color: #fff;
     border-radius: 10px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .profile-img {
@@ -80,6 +81,8 @@ p {
     margin-top: 30px;
     padding-left: 5px;
     padding-right: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .section h2 {
@@ -96,6 +99,7 @@ p {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .card img {
@@ -131,4 +135,31 @@ p {
 .card-link:active .card {
     transform: scale(1.05); /* Slightly scale up on hover and when pressed */
     transition: transform 0.2s; /* Smooth transition for scaling */
+}
+
+/* Media query for desktop layout */
+@media (min-width: 768px) {
+
+    .body {
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        align-self: center;
+    }
+
+    .profile-img {
+        margin-top: 0;
+        margin-right: 20px;
+    }
+
+    .section {
+        width: 80%;
+        align-items: center;
+    }
 }
