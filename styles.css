@@ -142,14 +142,13 @@ p {
     color: #fff;
     text-align: left;
     border-radius: 0 0 10px 10px;
-
 }
 
 .card-text p {
     margin: 0;
     font-size: 14px;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .card-link {
