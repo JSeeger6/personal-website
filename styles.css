@@ -131,6 +131,7 @@ p {
     overflow: hidden;
     box-sizing: border-box;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    touch-action: manipulation;
 }
 
 .card:hover, .card:active {
