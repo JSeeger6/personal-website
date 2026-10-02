@@ -143,13 +143,6 @@ p {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.card:hover, 
-.card:active, 
-.card:focus {
-    transform: scale(1.03); /* Scale up the card */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow for a lifting effect */
-}
-
 .card img {
     width: 100%;
     border-radius: 10px;
@@ -180,12 +173,92 @@ p {
     color: inherit; /* Inherit text color */
 }
 
-.card-link:hover .card,
-.card-link:active .card,
-.card-link:focus .card {
+.supportbay-link {
+    margin-top: 14px;
+    margin-right: 5px;
+}
+
+.supportbay-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 16px;
+    background: #ffd329;
+    color: #191914;
+    border: 3px solid #191914;
+    border-radius: 14px;
+    box-shadow: 5px 5px 0 #191914;
+}
+
+.supportbay-card-text {
+    min-width: 0;
+    text-align: left;
+}
+
+.supportbay-card-text h4 {
+    margin: 0 0 4px;
+    color: inherit;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.supportbay-card-text p {
+    margin: 0;
+    color: inherit;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.supportbay-card-arrow {
+    flex-shrink: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.card-link.is-pressed .card,
+.card-link:focus-visible .card {
     transform: scale(1.05); /* Slightly scale up on hover and when pressed */
     transition: transform 0.2s; /* Smooth transition for scaling */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Touch browsers can retain :hover after a tap; limit it to hover-capable input. */
+@media (hover: hover) and (pointer: fine) {
+    .card-link:hover .card,
+    .card-link:active .card {
+        transform: scale(1.05);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.supportbay-link:focus-visible {
+    outline: 3px solid #191914;
+    outline-offset: 8px;
+    border-radius: 14px;
+}
+
+.supportbay-link:focus-visible .supportbay-card {
+    transform: none;
+    box-shadow: 5px 5px 0 #191914;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .supportbay-link:hover .supportbay-card {
+        transform: translate(-2px, -2px);
+        box-shadow: 7px 7px 0 #191914;
+    }
+
+    .supportbay-link:active .supportbay-card {
+        transform: translate(3px, 3px);
+        box-shadow: 2px 2px 0 #191914;
+    }
+}
+
+.supportbay-link.is-pressed .supportbay-card {
+    transform: translate(3px, 3px);
+    box-shadow: 2px 2px 0 #191914;
 }
 
 .grid {
