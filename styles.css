@@ -357,9 +357,11 @@ main {
 .song-tile:nth-child(1) .song-cover { transform: rotate(-3deg); }
 .song-tile:nth-child(2) .song-cover { transform: rotate(2deg); }
 .song-tile:nth-child(3) .song-cover { transform: rotate(-2deg); }
-.song-play { position: absolute; right: 10px; bottom: 10px; display: grid; place-items: center; width: 32px; height: 32px; padding-left: 2px; border-radius: 50%; background: #fff; color: #222; font-size: 12px; box-shadow: 0 2px 8px #0002; }
+.song-play { position: absolute; right: 10px; bottom: 10px; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: #fff; color: #222; font-size: 12px; box-shadow: 0 2px 8px #0002; }
 .song-tile h4 { display: flex; justify-content: space-between; gap: 4px; margin: 15px 0 4px; color: #333; font-size: 14px; font-weight: 600; }
 .song-cover:focus-visible { outline: 2px solid #a55737; outline-offset: 5px; }
 @media (hover: hover) and (pointer: fine) { .song-tile a.song-cover:hover { transform: translateY(-6px) rotate(0); box-shadow: 0 12px 22px #35231a26; } }
 @media (max-width: 420px) { .song-shelf { gap: 12px; } .song-cover { border-radius: 12px; } .song-tile h4 { font-size: 12px; } .song-play { width: 27px; height: 27px; right: 7px; bottom: 7px; font-size: 10px; } }
 @media (prefers-reduced-motion: reduce) { .song-cover { transition: none; } }
+
+.song-play svg { display: block; width: 14px; height: 14px; }
